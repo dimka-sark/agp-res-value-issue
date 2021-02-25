@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ResValueIssue</string>
+    <item name="issue_resource_string" type="string" />
+</resources>

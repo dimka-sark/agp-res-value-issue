@@ -1,0 +1,35 @@
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+}
+
+android {
+  compileSdkVersion 30
+  buildToolsVersion "30.0.3"
+
+  defaultConfig {
+    applicationId "com.dimkasark.resvalueissue.bug"
+    minSdkVersion 22
+    targetSdkVersion 30
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    debug {
+    }
+    release {
+      minifyEnabled false
+    }
+  }
+}
+
+tasks.whenTaskAdded { task ->}
+
+android.applicationVariants.all { variant ->
+  variant.resValue("string", "issue_resource_string", "From applicationVariants")
+}
+
+dependencies {
+  implementation(project(":app_base"))
+}
